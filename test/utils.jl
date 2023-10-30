@@ -14,6 +14,7 @@ using PropCheck: tuple, itype, iconst
     end
 
     @test check(gen) do (a,b)
+        r = RealInterval(a,b)
         extrema(r) == extrema(a,b)
     end
 end
